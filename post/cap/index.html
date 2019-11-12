@@ -16,7 +16,7 @@
     <meta name="description" content="">
         
     <meta name="author" content="">
-    <meta property="og:url" content="http://tonytancoder.github.io/post/cap%E5%AE%9A%E7%90%86%E7%9A%84%E5%9B%BE%E8%A7%A3%E8%AF%81%E6%98%8E/">
+    <meta property="og:url" content="http://tonytancoder.github.io/post/cap/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -99,21 +99,21 @@
 
 <p>让我们考虑一个非常简单的分布式系统。我们的系统由两台服务器G1和G2。这两个服务器都跟踪同一个变量v，它的初始值是v0。G1和G2可以相互通信，也可以与外部客户端通信。这是我们系统的结构。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap1.png" alt="" /></p>
+<p><img src="cap.assets/cap1.png" alt="" /></p>
 
 <p>客户端可以从任何服务器请求进行写入和读取。当服务器收到请求时，它会执行它想要的任何计算，然后响应客户端。例如，这是写的流程。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap2.png" alt="" /></p>
+<p><img src="cap.assets/cap2.png" alt="" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap3.png" alt="cap3" /></p>
+<p><img src="cap.assets/cap3.png" alt="cap3" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap4.png" alt="cap4" /></p>
+<p><img src="cap.assets/cap4.png" alt="cap4" /></p>
 
 <p>这就是读取的流程。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap5.png" alt="" /></p>
+<p><img src="cap.assets/cap5.png" alt="" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap6.png" alt="cap6" /></p>
+<p><img src="cap.assets/cap6.png" alt="cap6" /></p>
 
 <p>现在我们已经建立了系统，让我们回顾一下系统的一致性，可用性和分区容忍性意味着什么。</p>
 
@@ -129,35 +129,35 @@
 
 <p>以下是<strong>不一致</strong>系统的示例。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap7.png" alt="" /></p>
+<p><img src="cap.assets/cap7.png" alt="" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap8.png" alt="cap8" /></p>
+<p><img src="cap.assets/cap8.png" alt="cap8" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap9.png" alt="cap9" /></p>
+<p><img src="cap.assets/cap9.png" alt="cap9" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap10.png" alt="cap10" /></p>
+<p><img src="cap.assets/cap10.png" alt="cap10" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap11.png" alt="cap11" /></p>
+<p><img src="cap.assets/cap11.png" alt="cap11" /></p>
 
 <p>我们的客户写v1到G1并且G1响应确认成功，但是从G2读取v，它得到旧的数据：v0。</p>
 
 <p>另一方面，这是一个<strong>一致性</strong> 系统的例子。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap12.png" alt="" /></p>
+<p><img src="cap.assets/cap12.png" alt="" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap13.png" alt="cap13" /></p>
+<p><img src="cap.assets/cap13.png" alt="cap13" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap14.png" alt="cap14" /></p>
+<p><img src="cap.assets/cap14.png" alt="cap14" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap15.png" alt="cap15" /></p>
+<p><img src="cap.assets/cap15.png" alt="cap15" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap16.png" alt="cap16" /></p>
+<p><img src="cap.assets/cap16.png" alt="cap16" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap17.png" alt="cap17" /></p>
+<p><img src="cap.assets/cap17.png" alt="cap17" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap18.png" alt="cap18" /></p>
+<p><img src="cap.assets/cap18.png" alt="cap18" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap19.png" alt="cap19" /></p>
+<p><img src="cap.assets/cap19.png" alt="cap19" /></p>
 
 <p>在这个系统中，在向客户发送确认之前,G1将其值复制到G2。因此，当客户端从G2读取时，它读取到v的最新值：v1。</p>
 
@@ -181,7 +181,7 @@
 
 <p>这意味着G1和G2之间发送给对方的任何消息都可以丢失。如果丢失了所有消息，那么我们的系统将如下所示。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap20.png" alt="" /></p>
+<p><img src="cap.assets/cap20.png" alt="" /></p>
 
 <p>尽管有网络分区，我们的系统必须能够正常运行才能说我们的系统是分区容错的。</p>
 
@@ -191,21 +191,21 @@
 
 <p>假设确实存在一致性，可用性和分区容错的系统。我们要做的第一件事是分区我们的系统。看起来像这样。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap21.png" alt="" /></p>
+<p><img src="cap.assets/cap21.png" alt="" /></p>
 
 <p>接下来，我们的客户端请求将v1写入G1。由于我们的系统可用，G1必须回应。但是，由于网络是分区的，因此G1无法将其数据复制到G2。Gilbert 和Lynch 称这个执行阶段为α1。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap22.png" alt="" /></p>
+<p><img src="cap.assets/cap22.png" alt="" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap23.png" alt="cap23" /></p>
+<p><img src="cap.assets/cap23.png" alt="cap23" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap24.png" alt="cap24" /></p>
+<p><img src="cap.assets/cap24.png" alt="cap24" /></p>
 
 <p>接下来，我们让客户向G2发出读取请求。同样，由于我们的系统可用，G2必须回应。并且由于网络是分区的，G2无法从G1获取更新值。它返回v0。Gilbert 和Lynch这个执行阶段为α2。</p>
 
-<p><img src="CAP定理的图解证明.assets/cap25.png" alt="" /></p>
+<p><img src="cap.assets/cap25.png" alt="" /></p>
 
-<p><img src="CAP定理的图解证明.assets/cap26.png" alt="cap26" /></p>
+<p><img src="cap.assets/cap26.png" alt="cap26" /></p>
 
 <p>系统在客户端将v1写入G1之后,G2返回v0给客户端。这是不一致的。</p>
 
@@ -247,7 +247,7 @@
 <ul class="widget-list">
     
     <li>
-        <a href="http://tonytancoder.github.io/post/cap%E5%AE%9A%E7%90%86%E7%9A%84%E5%9B%BE%E8%A7%A3%E8%AF%81%E6%98%8E/" title=""></a>
+        <a href="http://tonytancoder.github.io/post/cap/" title=""></a>
     </li>
     
 </ul>
