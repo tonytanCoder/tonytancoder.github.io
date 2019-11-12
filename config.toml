@@ -1,5 +1,5 @@
 baseurl = "https://tonytancoder.github.io"
-disablePathToLower = false
+disablePathToLower = true
 languageCode = "zh-cn"
 title = "tonys'blog"
 theme = "maupassant-hugo"
