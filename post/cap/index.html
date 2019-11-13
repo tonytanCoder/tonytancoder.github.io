@@ -49,6 +49,12 @@
                 <nav id="nav-menu" class="clearfix">
                     <a class="current" href="http://tonytancoder.github.io/">首页</a>
                     
+                    <a  href="http://tonytancoder.github.io/java/" title="java">java</a>
+                    
+                    <a  href="http://tonytancoder.github.io/archives/" title="归档">归档</a>
+                    
+                    <a  href="http://tonytancoder.github.io/about/" title="关于">关于</a>
+                    
                 </nav>
             </div>
         </div>
@@ -73,6 +79,10 @@
                         </date>
                         
                         
+                        <div class="post-meta">
+                            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span> 阅读</span></span>
+                        </div>
+                        
                         
                         <div class="post-content">
                             
@@ -87,7 +97,7 @@
 <li>分区容错性</li>
 </ul>
 
-<p>本指南将总结 <a href="http://lpd.epfl.ch/sgilbert/pubs/BrewersConjecture-SigAct.pdf">Gilbert和Lynch给出的规范并给出</a> 带有图片<a href="http://lpd.epfl.ch/sgilbert/pubs/BrewersConjecture-SigAct.pdf">的CAP定理的证明</a>！</p>
+<p>本指南将总结 <a href="http://lpd.epfl.ch/sgilbert/pubs/BrewersConjecture-SigAct.pdf">Gilbert和Lynch的规范以及</a> 带有图片<a href="http://lpd.epfl.ch/sgilbert/pubs/BrewersConjecture-SigAct.pdf">的CAP定理的证明</a>！</p>
 
 <h2 id="什么是cap定理">什么是CAP定理？</h2>
 
@@ -121,9 +131,9 @@
 
 <p>以下是Gilbert和Lynch描述一致性的方法。</p>
 
-
+<blockquote>
 <p>在写操作完成后开始的任何读操作都必须返回该值，或者是后续写操作的结果.</p>
-
+</blockquote>
 
 <p>在一致的系统中，一旦客户端将值写入任何服务器并获得响应，它就希望从它读取的任何服务器返回该值（或更新的值）。</p>
 
@@ -165,9 +175,9 @@
 
 <p>以下是Gilbert和Lynch描述可用性的方法。</p>
 
-
+<blockquote>
 <p>系统中非故障节点收到的每个请求都必须得到响应.</p>
-
+</blockquote>
 
 <p>在可用系统中，如果我们的客户端向服务器发送请求并且服务器未崩溃，则服务器必须最终响应客户端。不允许服务器忽略客户端的请求。</p>
 
@@ -175,9 +185,9 @@
 
 <p>以下是Gilbert和Lynch描述分区容错的方法。</p>
 
-
+<blockquote>
 <p>允许网络丢失从一个节点发送到另一个节点的任意多条消息</p>
-
+</blockquote>
 
 <p>这意味着G1和G2之间发送给对方的任何消息都可以丢失。如果丢失了所有消息，那么我们的系统将如下所示。</p>
 
@@ -230,6 +240,16 @@
 
     
     
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= ""
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
                 </div>
             </div>
             <div id="secondary">
@@ -270,6 +290,21 @@
     </section>
 
     
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e" title="Android Gradle权威指南">Android Gradle权威指南</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="http://mirrors.flysnow.org/" title="常用开发工具CDN镜像">常用开发工具CDN镜像</a>
+        </li>
+        
+    </ul>
+</section>
+
 
     <section class="widget">
         <h3 class="widget-title">其它</h3>
@@ -312,7 +347,20 @@
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src="/js/totop.js?v=0.0.0" async=""></script>
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'GA ID', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
 
 
