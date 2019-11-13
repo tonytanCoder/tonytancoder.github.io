@@ -87,7 +87,7 @@
 <li>分区容错性</li>
 </ul>
 
-<p>本指南将总结 <a href="http://lpd.epfl.ch/sgilbert/pubs/BrewersConjecture-SigAct.pdf">Gilbert和Lynch的规范以及</a> 带有图片<a href="http://lpd.epfl.ch/sgilbert/pubs/BrewersConjecture-SigAct.pdf">的CAP定理的证明</a>！</p>
+<p>本指南将总结 <a href="http://lpd.epfl.ch/sgilbert/pubs/BrewersConjecture-SigAct.pdf">Gilbert和Lynch给出的规范并给出</a> 带有图片<a href="http://lpd.epfl.ch/sgilbert/pubs/BrewersConjecture-SigAct.pdf">的CAP定理的证明</a>！</p>
 
 <h2 id="什么是cap定理">什么是CAP定理？</h2>
 
@@ -121,9 +121,9 @@
 
 <p>以下是Gilbert和Lynch描述一致性的方法。</p>
 
-<blockquote>
+
 <p>在写操作完成后开始的任何读操作都必须返回该值，或者是后续写操作的结果.</p>
-</blockquote>
+
 
 <p>在一致的系统中，一旦客户端将值写入任何服务器并获得响应，它就希望从它读取的任何服务器返回该值（或更新的值）。</p>
 
@@ -165,9 +165,9 @@
 
 <p>以下是Gilbert和Lynch描述可用性的方法。</p>
 
-<blockquote>
+
 <p>系统中非故障节点收到的每个请求都必须得到响应.</p>
-</blockquote>
+
 
 <p>在可用系统中，如果我们的客户端向服务器发送请求并且服务器未崩溃，则服务器必须最终响应客户端。不允许服务器忽略客户端的请求。</p>
 
@@ -175,9 +175,9 @@
 
 <p>以下是Gilbert和Lynch描述分区容错的方法。</p>
 
-<blockquote>
+
 <p>允许网络丢失从一个节点发送到另一个节点的任意多条消息</p>
-</blockquote>
+
 
 <p>这意味着G1和G2之间发送给对方的任何消息都可以丢失。如果丢失了所有消息，那么我们的系统将如下所示。</p>
 
