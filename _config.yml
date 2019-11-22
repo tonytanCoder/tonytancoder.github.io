@@ -57,13 +57,13 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+# disqus_username: tonytancoder
 
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
+  clientID: 2a6bfd87ee94cfb557a5                            #生成的clientID
+  clientSecret: 4dc2082ea057dafc8009ee967348b90633b0f558    #生成的clientSecret
   repo: tonytancoder.github.io    #仓库名称
   owner: tonytancoder    #github用户名
   admin: tonytancoder
