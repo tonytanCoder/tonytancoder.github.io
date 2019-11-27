@@ -1,16 +1,3 @@
----
-layout:     post
-title:      TCP中backlog参数的作用
-subtitle:    TCP中backlog参数的作用
-date:       2019-11-27
-author:     BY
-header-img: img/post-bg-ios9-web.jpg
-catalog: true
-tags:
-    - tcp
-    - 通讯协议
-    - java
----
 # TCP中backlog参数的作用
 
 当应用程序通过使用系统调用[`listen`](http://linux.die.net/man/2/listen)函数将套接字置于LISTEN状态时，它需要为该套接字指定一个 backlog。 backlog通常被描述为用于限制传入的连接数的队列。
