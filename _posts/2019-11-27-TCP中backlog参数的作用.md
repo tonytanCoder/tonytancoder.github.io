@@ -15,7 +15,7 @@ tags:
 
 当应用程序通过使用系统调用[`listen`](http://linux.die.net/man/2/listen)函数将套接字置于LISTEN状态时，它需要为该套接字指定一个 backlog。 backlog通常被描述为用于限制传入的连接数的队列。
 
-![TCP状态图](TCP的backlog参数在linux中的作用.assets/tcp-state-diagram.png)
+![TCP状态图](TCP中backlog参数的作用.assets/tcp-state-diagram.png)
 
 由于TCP使用三次握手，因此传入连接在到达ESTABLISHED状态之前会经过SYN RECEIVED的中间状态，并且可以通过accept系统调用返回到应用程序（请参见上面的[TCP状态图](http://commons.wikimedia.org/wiki/File:Tcp_state_diagram_fixed.svg)）。这意味着TCP / IP堆栈可以有两种方法来为处于LISTEN状态的套接字实现backlog队列：
 
