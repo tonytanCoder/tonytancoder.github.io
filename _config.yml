@@ -105,7 +105,7 @@ friends: [
         title: "Python 标准库",
         href: "https://docs.python.org/zh-cn/3/library/concurrent.futures.html"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "Cloudflare博客",
+        href: "https://blog.cloudflare.com/"
     }
 ]
