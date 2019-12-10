@@ -107,5 +107,9 @@ friends: [
     },{
         title: "Cloudflare博客",
         href: "https://blog.cloudflare.com/"
+    },{
+        title: "何登成的博客",
+        href: "http://hedengcheng.com/"
     }
+
 ]
